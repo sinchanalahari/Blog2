@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('Post','PostController');
+Route::resource('Profile','ProfileController');
+Route::resource('Chat','ChatController');

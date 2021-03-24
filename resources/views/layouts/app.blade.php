@@ -51,13 +51,16 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a href="" class="nav-link">Chat</a>
+                                <a href="" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Mypost</a>
+                                <a href="Chat" class="nav-link">Chat</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Profile</a>
+                                <a href="Post" class="nav-link">Mypost</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="Profile" class="nav-link">Profile</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
