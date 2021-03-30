@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -34,7 +37,16 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user=$request->all();
+        $user['password']=Hash::make($request->password);
+        $file=request()->file('image');
+        $user['image']=$file->store('toprofile',['disk'=>'public']);
+        $id=Auth::user()->id;
+        unset($user['_token']);
+        unset($user['upload']);
+//        dd($user);
+        $update=User::where('id',$id)->update($user);
+        return  view('profile.view');
     }
 
     /**

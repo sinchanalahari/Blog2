@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -34,7 +35,11 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $store=($request->all());
+       $file=request()->file('image');
+       $store['image']=$file->store('toPath',['disk'=>'public']);
+       Post::create($store);
+       return redirect()->route('home');
     }
 
     /**
