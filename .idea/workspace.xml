@@ -19,17 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00da0662-39c7-4e34-b827-9cd0a9a0c2d5" name="Default Changelist" comment="profile page and chat page created">
-      <change afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_25_044626_create_posts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mypost/create.blade.php" afterDir="false" />
+    <list default="true" id="00da0662-39c7-4e34-b827-9cd0a9a0c2d5" name="Default Changelist" comment="profile page updated">
+      <change afterPath="$PROJECT_DIR$/app/Chat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_03_31_050525_create_chats_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/chat/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/chat/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/view.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +192,9 @@
       <workItem from="1616561100974" duration="5023000" />
       <workItem from="1616566353542" duration="4074000" />
       <workItem from="1616647376398" duration="7904000" />
-      <workItem from="1617078591472" duration="10590000" />
+      <workItem from="1617078591472" duration="10720000" />
+      <workItem from="1617117226326" duration="585000" />
+      <workItem from="1617164938864" duration="10186000" />
     </task>
     <task id="LOCAL-00001" summary="profile page and chat page created">
       <created>1616570427038</created>
@@ -205,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616570427038</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="profile page updated">
+      <created>1617089484185</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617089484185</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +231,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="profile page and chat page created" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile page and chat page created" />
+    <MESSAGE value="profile page updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="profile page updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617086885770">
@@ -253,13 +259,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="521" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1616484333715" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1616652137284">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1617169645380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1616652137284" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1616570437050">
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1617169645380" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1617089496575">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1616570437050" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1617089496575" />
   </component>
 </project>

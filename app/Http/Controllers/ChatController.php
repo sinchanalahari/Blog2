@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Chat;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class ChatController extends Controller
 {
@@ -13,7 +17,9 @@ class ChatController extends Controller
      */
     public function index()
     {
-        return  view('chat.view');
+        $id=Auth::user()->id;
+        $users =User::Where('id','!=', $id)->get();
+        return  view('chat.view',compact('users'));
     }
 
     /**
@@ -34,7 +40,12 @@ class ChatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $chat=$request->all();
+        $send_id=Auth::user()->id;
+        $chat['send_id']=$send_id;
+        //dd($chat);
+        Chat::create($chat);
+        return Redirect::back();
     }
 
     /**
@@ -45,7 +56,11 @@ class ChatController extends Controller
      */
     public function show($id)
     {
-        //
+        $send_id=Auth::user()->id;
+        $recv =User::where('id',$id)->first();
+        $chats=Chat::where('rec_id',$id)->where('send_id',$send_id)->orwhere('rec_id',$send_id)->where('send_id',$id)->get();
+ //$chats= DB::select(DB::raw(""));
+        return view('chat.show',compact('recv','chats'));
     }
 
     /**
