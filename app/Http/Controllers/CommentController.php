@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Comment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $name=Auth::user()->name;
-        $posts=Post::where('username',$name)->orderBy('id', 'DESC')->get();
-        return  view('mypost.view',compact('posts'));
+        //
     }
 
     /**
@@ -38,11 +36,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-       $store=($request->all());
-       $file=request()->file('image');
-       $store['image']=$file->store('toPath',['disk'=>'public']);
-       Post::create($store);
-       return redirect()->route('home');
+       $comment=$request->all();
+       Comment::create($comment);
+       return Redirect::back();
     }
 
     /**
@@ -53,7 +49,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $id=$id;
+        $comments=Comment::where('post_id',$id)->get();
+        return  view('comment.view',compact('id','comments'));
     }
 
     /**

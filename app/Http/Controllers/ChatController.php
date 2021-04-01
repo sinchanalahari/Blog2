@@ -19,7 +19,7 @@ class ChatController extends Controller
     {
         $id=Auth::user()->id;
         $users =User::Where('id','!=', $id)->get();
-        return  view('chat.view',compact('users'));
+        return  view('chat.view',compact('users','id'));
     }
 
     /**

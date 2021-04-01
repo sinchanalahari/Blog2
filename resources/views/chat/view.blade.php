@@ -21,9 +21,10 @@
                                 <div class="media"><img src="{{ url('storage/'.$user->image) }}" alt="user" width="50" class="rounded-circle">
                                     <div class="media-body ml-4">
                                         <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <h6 class="mb-0">{{$user->name}}</h6><small class="small font-weight-bold">25 Dec</small>
+                                            <h6 class="mb-0">{{$user->name}}</h6>
+{{--                                            <small class="small font-weight-bold">25 Dec</small>--}}
                                         </div>
-                                        <p class="font-italic mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                        <h5 >{{\App\Chat::where('rec_id',$user->id)->where('send_id',$id)->orwhere('rec_id',$id)->where('send_id',$user->id)->orderBy('id', 'DESC')->pluck('message')->first()}}</h5>
                                     </div>
                                 </div>
                             </a>
